@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		body {font-family:system-ui; }
+
+		/* mobile first */
+		/* @media (min-width: 640px) {
+			.row {display: flex; gap: 1rem;} 
+			.row > * {flex: 1;}
+		} */
+
+			/* pour avoir les colonnes */
+			.row {display: flex; gap: 1rem;} 
+			.row > * {flex: 1;}
+
+			/* pour les mettres en colonnes et pas l'une à coté de l'autre */
+			@media (max-width: 640px) {
+				.row { flex-direction: column; }
+			}
+
+			/* format ordi- plus grand que 666 */
+		@media (min-width: 666px) {
+			body { background: pink; }
+			div { color: white; }
+		}
+
+			/* format télephone- maximum 500 px */
+		@media (max-width: 500px) {
+			div {color: magenta; }
+			body { background: blue; }
+		}
+
+		.row{ 
+			max-width: 1200px;
+			margin: auto ;
+		}
+	
+	</style>
+</head>
+<body>
+	
+	<div class="row">
+		<div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, pariatur harum? Natus eligendi ipsam exercitationem repellendus nihil, sint qui magnam consequatur velit sequi ad nostrum quos placeat obcaecati praesentium consectetur!</div>
+		<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore corrupti ratione, corporis, esse deleniti consectetur quisquam maiores voluptatum aliquam ab necessitatibus perferendis doloremque dolore consequatur voluptates amet quis ut reprehenderit!</div>
+	</div>
+	
+</body>
+</html>
